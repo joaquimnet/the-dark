@@ -1,27 +1,27 @@
-# the-dark
+# The Dark
 
 > A react component library straight from the shadow realm.
 
-[![NPM](https://img.shields.io/npm/v/the-dark.svg)](https://www.npmjs.com/package/the-dark) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/the-dark.svg)](https://www.npmjs.com/package/the-dark) [![The Dark](https://img.shields.io/badge/The-Dark-blue?labelColor=000000&color=555555)](https://github.com/joaquimnet/the-dark)
 
 ## Install
 
 ```bash
-npm install --save the-dark
+npm install the-dark
 ```
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'the-dark'
+import { Flex, Button } from 'the-dark'
 import 'the-dark/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const MyComponent = () => {
+  return <Flex justifyCenter alignCenter>
+    <Button animated>The Dark</Button>
+  </Flex>
 }
 ```
 

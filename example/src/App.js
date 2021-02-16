@@ -1,10 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-import { ExampleComponent } from 'the-dark'
-import 'the-dark/dist/index.css'
+import { ExampleComponent, Flex, Button } from 'the-dark';
+
+import 'the-dark/dist/index.css';
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
-}
+  return (
+    <Flex justifyCenter alignCenter>
+      <ExampleComponent text='Create React Library Example 😄' />
+      <Button animated>The Dark</Button>
+    </Flex>
+  );
+};
 
-export default App
+export default App;
