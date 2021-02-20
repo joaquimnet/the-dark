@@ -1,7 +1,5 @@
 .Container {
   height: 100%;
-  max-width: 1000px;
-  margin: auto;
   padding: 0 1rem;
   position: relative;
   display: flex;
@@ -12,30 +10,6 @@
   padding: 0 !important;
   margin: 0 !important;
   max-width: revert;
-}
-
-.JustifyCenter {
-  justify-content: center;
-}
-
-.JustifyStart {
-  justify-content: flex-start;
-}
-
-.JustifyEnd {
-  justify-content: flex-end;
-}
-
-.AlignCenter {
-  align-items: center;
-}
-
-.AlignStart {
-  align-items: flex-start;
-}
-
-.AlignEnd {
-  align-items: flex-end;
 }
 
 .Row {

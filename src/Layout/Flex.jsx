@@ -5,35 +5,28 @@ import classes from './Flex.module.css';
 
 export const Flex = ({
   children,
-  alignCenter,
-  alignStart,
-  alignEnd,
-  justifyCenter,
-  justifyStart,
-  justifyEnd,
-  row,
-  column,
+  align = 'flex-start',
+  justify = 'flex-start',
+  direction,
   fluid,
   className,
-  as,
+  style: externalStyles = {},
+  as: Component = 'div',
   ...otherProps
 }) => {
-  const css = classnames(classes.Container, className, {
-    [classes.AlignCenter]: !!alignCenter,
-    [classes.AlignStart]: !!alignStart,
-    [classes.AlignEnd]: !!alignEnd,
-    [classes.JustifyCenter]: !!justifyCenter,
-    [classes.JustifyStart]: !!justifyStart,
-    [classes.JustifyEnd]: !!justifyEnd,
-    [classes.Row]: !!row,
-    [classes.Column]: !!column,
-    [classes.Fluid]: !!fluid,
+  const css = classnames(classes.Container, classes.Fluid, className, {
+    [classes.Row]: direction === 'row',
+    [classes.Column]: direction === 'column',
   });
 
-  const Component = as || 'div';
+  const style = {
+    justifyContent: justify,
+    alignItems: align,
+    ...externalStyles,
+  };
 
   return (
-    <Component className={css} {...otherProps}>
+    <Component className={css} style={style} {...otherProps}>
       {children}
     </Component>
   );

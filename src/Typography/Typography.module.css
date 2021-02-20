@@ -1,0 +1,15 @@
+.Typography {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.Typography a {
+  text-decoration: none;
+  color: rgb(58, 128, 219);
+  transition: background-color 0.1s ease-in, color 0.1s ease-out;
+}
+
+.Typography a:hover {
+  background-color: rgb(175, 32, 32);
+  color: white;
+}

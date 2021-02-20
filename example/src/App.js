@@ -1,14 +1,21 @@
 import React from 'react';
 
-import { ExampleComponent, Flex, Button } from 'the-dark';
+import { Flex, Button, Paper, Typography } from 'the-dark';
 
 import 'the-dark/dist/index.css';
 
 const App = () => {
   return (
-    <Flex justifyCenter alignCenter>
-      <ExampleComponent text='Create React Library Example 😄' />
-      <Button animated>The Dark</Button>
+    <Flex justify='center' align='center'>
+      <Paper>
+        <Typography>Welcome to the Shadow Realm, child.</Typography>
+        <Flex justify='space-evenly' direction='row' style={{ width: '100%' }}>
+          <Button animated>Embrace The Dark</Button>
+          <Button weak animated>
+            Forsaken The Light
+          </Button>
+        </Flex>
+      </Paper>
     </Flex>
   );
 };
