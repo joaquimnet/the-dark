@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Flex, Button, Paper, Typography } from 'the-dark';
+import { Flex, Button, Paper, Typography, Delimiter } from 'the-dark';
 
 import 'the-dark/dist/index.css';
 
@@ -15,6 +15,17 @@ const App = () => {
             Forsaken The Light
           </Button>
         </Flex>
+        <Delimiter />
+        <Typography align='center'>
+          🛠{' '}
+          <a
+            href='https://github.com/joaquimnet/the-dark'
+            target='_blank'
+            rel='noreferrer'
+          >
+            The Dark
+          </a>
+        </Typography>
       </Paper>
     </Flex>
   );
